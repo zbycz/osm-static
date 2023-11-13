@@ -13,10 +13,10 @@ for (const item of beroun.elements) {
 
 fs.writeFileSync('./beroun-out.json', JSON.stringify(out, null, 2));
 
-const out2 = beroun.elements.map(({ type, id }) => `/${type}/${id}`).join('\n');
-fs.writeFileSync('./beroun-links.txt', out2);
+const out2 = beroun.elements.map(({ type, id }) => `https://osmapp.org/cs/${type}/${id}`).join('\n');
+fs.writeFileSync('./beroun-sitemap.txt', out2);
 
 
 
-fs.writeFileSync('./beroun-links.htm', beroun.elements.map(({ type, id, tags }) => `<a href="https://osmapp.org/${type}/${id}">${tags.name}</a>`).join('\n'));
-fs.writeFileSync('./beroun-links.md', beroun.elements.map(({ type, id, tags }) => ` - [${tags.name}](https://osmapp.org/${type}/${id})`).join('\n'));
+fs.writeFileSync('./beroun-links.htm', beroun.elements.map(({ type, id, tags }) => `<a href="https://osmapp.org/cs/${type}/${id}">${tags.name}</a>`).join('\n'));
+fs.writeFileSync('./beroun-links.md', beroun.elements.map(({ type, id, tags }) => ` - [${tags.name}](https://osmapp.org/cs/${type}/${id})`).join('\n'));
