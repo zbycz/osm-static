@@ -7,3 +7,9 @@ Beroun
 @count	@count:nodes	@count:ways	@count:relations
 1312	387	794	131
 
+
+
+
+
+Notes:
+- faster results - use quadtile (out qt)
